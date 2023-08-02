@@ -1,0 +1,54 @@
+.weather,
+.random {
+
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.weather:hover,
+.random:hover {
+    cursor: pointer;
+}
+
+.weather,
+.random {
+    color: #2f1825;
+    position: relative;
+    text-decoration: none;
+}
+
+.weather::before,
+.random::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #e6378e;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.weather:hover::before,
+.random:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    cursor: pointer;
+}
+
+/* Presentational Styles */
+body {
+
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    place-items: center;
+}
